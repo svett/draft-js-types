@@ -948,6 +948,8 @@ import EditorBlock = Draft.Component.Components.DraftEditorBlock;
 import EditorState = Draft.Model.ImmutableData.EditorState;
 
 import CompositeDecorator = Draft.Model.Decorators.CompositeDraftDecorator;
+import DraftDecorator = Draft.Model.Decorators.DraftDecorator;
+import DraftDecoratorType = Draft.Model.Decorators.DraftDecoratorType;
 import Entity = Draft.Model.Entity.DraftEntity;
 import EntityInstance = Draft.Model.Entity.DraftEntityInstance;
 
@@ -965,6 +967,7 @@ import RichUtils = Draft.Model.Modifier.RichTextEditorUtil;
 
 import DefaultDraftBlockRenderMap = Draft.Model.ImmutableData.DefaultDraftBlockRenderMap;
 import DefaultDraftInlineStyle = Draft.Model.ImmutableData.DefaultDraftInlineStyle;
+import DraftBlockRenderConfig = Draft.Model.ImmutableData.DraftBlockRenderConfig;
 
 import RawDraftInlineStyleRange = Draft.Model.Encoding.RawDraftInlineStyleRange;
 import RawDraftEntityRange = Draft.Model.Encoding.RawDraftEntityRange;
@@ -996,6 +999,9 @@ export {
     EditorState,
 
     CompositeDecorator,
+    DraftDecorator,
+    DraftDecoratorType,
+    DraftBlockRenderConfig,
     Entity,
     EntityInstance,
 
