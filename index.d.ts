@@ -509,7 +509,7 @@ declare namespace Draft {
              */
             interface RawDraftContentBlock {
                 key: string;
-                type: DraftBlockType;
+                type: DraftBlockType | string;
                 text: string;
                 depth: number;
                 inlineStyleRanges: Array<RawDraftInlineStyleRange>;
