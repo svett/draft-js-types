@@ -515,6 +515,8 @@ declare namespace Draft {
                 inlineStyleRanges: Array<RawDraftInlineStyleRange>;
                 entityRanges: Array<RawDraftEntityRange>;
                 data?: Object;
+                // Tree-data support
+                children?: Array<RawDraftContentBlock>,
             }
 
             /**
@@ -743,7 +745,14 @@ declare namespace Draft {
                  * Execute a callback for every contiguous range of entities within the block.
                  */
                 findEntityRanges(filterFn: (value: CharacterMetadata) => boolean, callback: (start: number, end: number) => void): void;
+
+                // ContentBlockNode
+                getChildKeys(): Immutable.List<string>;
+                getParentKey(): string | null;
+                getPrevSiblingKey(): string | null;
+                getNextSiblingKey(): string | null;
             }
+
 
             class ContentState extends Record {
                 static createFromBlockArray(blocks: Array<ContentBlock>, entityMap?: any): ContentState;
