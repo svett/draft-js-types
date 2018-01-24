@@ -387,6 +387,7 @@ declare namespace Draft {
 
         namespace Decorators {
             import ContentBlock = Draft.Model.ImmutableData.ContentBlock;
+            import ContentState = Draft.Model.ImmutableData.ContentState;
 
             /**
             * An interface for document decorator classes, allowing the creation of
@@ -398,7 +399,7 @@ declare namespace Draft {
                 /**
                  * Given a `ContentBlock`, return an immutable List of decorator keys.
                  */
-                getDecorations(block: ContentBlock): Immutable.List<string>;
+                getDecorations(block: ContentBlock, contentState: ContentState): Immutable.List<string>;
 
                 /**
                  * Given a decorator key, return the component to use when rendering
